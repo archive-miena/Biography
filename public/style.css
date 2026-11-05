@@ -1,0 +1,516 @@
+/* =========================
+ANNE YOMIE PERSONAL WEBSITE
+Theme: Pink, White & Yellow
+========================= */
+
+:root {
+--pink: #f06b9b;
+--hot-pink: #ed5790;
+--soft-pink: #fff0f5;
+--baby-pink: #ffe1ec;
+--yellow: #ffe58a;
+--white: #ffffff;
+--text: #654b57;
+--muted: #927985;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: linear-gradient(
+135deg,
+#fff5f9,
+#ffffff,
+#fff9e8
+);
+color: var(--text);
+overflow-x: hidden;
+}
+
+a {
+text-decoration: none;
+}
+
+/* NAVBAR */
+
+header {
+width: 100%;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 8%;
+background: rgba(255,255,255,0.95);
+box-shadow: 0 3px 15px #f5b5cc30;
+}
+
+.logo {
+font-size: 28px;
+font-weight: 800;
+color: var(--pink);
+}
+
+.logo span {
+color: var(--yellow);
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+gap: 25px;
+}
+
+.nav-links a {
+color: var(--pink);
+font-size: 14px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: #e0ad27;
+}
+
+/* HOME */
+
+.home {
+min-height: 90vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 70px 10%;
+gap: 50px;
+}
+
+.home-content {
+max-width: 550px;
+animation: fadeUp 1s ease;
+}
+
+.welcome {
+color: #d99b16;
+letter-spacing: 2px;
+font-size: 13px;
+font-weight: 600;
+margin-bottom: 20px;
+}
+
+.home h1 {
+font-size: clamp(35px, 5vw, 60px);
+line-height: 1.2;
+color: var(--text);
+}
+
+.home h1 span {
+color: var(--hot-pink);
+}
+
+.home h2 {
+font-size: 19px;
+color: #b36b88;
+margin: 15px 0;
+}
+
+.description {
+line-height: 1.9;
+color: var(--muted);
+font-size: 14px;
+margin-bottom: 30px;
+}
+
+.btn {
+display: inline-block;
+background: var(--pink);
+color: white;
+padding: 14px 25px;
+border-radius: 30px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: var(--yellow);
+color: #765b27;
+transform: translateY(-5px);
+}
+
+/* PROFILE IMAGE */
+
+.home-image img {
+width: 300px;
+height: 350px;
+object-fit: cover;
+border: 10px solid white;
+border-radius: 45% 45% 30% 30%;
+box-shadow:
+0 10px 0 var(--yellow),
+0 15px 35px #e8a6bd60;
+animation: floating 4s ease-in-out infinite;
+}
+
+/* SECTION TITLE */
+
+section {
+scroll-margin-top: 85px;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.section-title > p:first-child {
+color: #d99b16;
+letter-spacing: 2px;
+font-size: 12px;
+font-weight: 700;
+}
+
+.section-title h2 {
+font-size: 35px;
+margin-top: 10px;
+}
+
+.section-title h2 span {
+color: var(--hot-pink);
+}
+
+/* ABOUT */
+
+.about {
+padding: 90px 10%;
+background: #fff8fb;
+}
+
+.about-card {
+max-width: 850px;
+margin: auto;
+padding: 35px;
+background: var(--baby-pink);
+border: 2px solid var(--yellow);
+border-radius: 25px;
+box-shadow: 0 10px 25px #e8a6bd30;
+}
+
+.about-card h3 {
+color: var(--hot-pink);
+margin-bottom: 15px;
+}
+
+.about-card p {
+line-height: 2;
+font-size: 14px;
+color: var(--muted);
+}
+
+/* HOBBIES */
+
+.hobbies {
+padding: 90px 10%;
+}
+
+.hobby-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 20px;
+}
+
+.hobby-card {
+background: var(--baby-pink);
+border: 2px solid var(--yellow);
+padding: 30px 20px;
+border-radius: 22px;
+text-align: center;
+transition: 0.3s;
+}
+
+.hobby-card:hover {
+transform: translateY(-10px);
+background: #fff7fa;
+box-shadow: 0 10px 25px #e8a6bd40;
+}
+
+.icon {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.hobby-card h3 {
+color: var(--hot-pink);
+font-size: 16px;
+margin-bottom: 10px;
+}
+
+.hobby-card p {
+color: var(--muted);
+font-size: 12px;
+line-height: 1.8;
+}
+
+/* FAVORITES */
+
+.favorites {
+padding: 90px 10%;
+background: #fffaf0;
+}
+
+.favorite-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+max-width: 800px;
+margin: auto;
+}
+
+.favorite-card {
+padding: 25px;
+background: white;
+border: 2px solid #ffe7a5;
+border-radius: 18px;
+transition: 0.3s;
+}
+
+.favorite-card:hover {
+transform: scale(1.03);
+}
+
+.favorite-card h3 {
+color: var(--hot-pink);
+font-size: 16px;
+margin-bottom: 8px;
+}
+
+.favorite-card p {
+color: var(--muted);
+font-size: 13px;
+}
+
+/* ORGANIZATIONS */
+
+.organizations {
+padding: 90px 10%;
+background: #fff8fb;
+}
+
+.organization-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+max-width: 900px;
+margin: auto;
+}
+
+.organization-card {
+background: var(--baby-pink);
+border: 2px solid var(--yellow);
+border-radius: 22px;
+padding: 30px;
+text-align: center;
+transition: 0.3s;
+}
+
+.organization-card:hover {
+transform: translateY(-8px);
+background: #fff5f8;
+box-shadow: 0 12px 25px #e8a6bd40;
+}
+
+.organization-card h3 {
+color: var(--hot-pink);
+font-size: 17px;
+}
+
+.organization-subtitle {
+color: #d99b16;
+font-weight: 600;
+margin: 10px 0;
+}
+
+.organization-card p {
+color: var(--muted);
+font-size: 13px;
+line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact {
+padding: 90px 10%;
+}
+
+.contact-box {
+max-width: 800px;
+margin: auto;
+padding: 60px 30px;
+text-align: center;
+border-radius: 30px;
+background: linear-gradient(
+120deg,
+#ffd8e7,
+#fff0b8
+);
+border: 3px solid white;
+box-shadow: 0 12px 30px #e8a6bd40;
+}
+
+.contact-box > p:first-child {
+color: #d99b16;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 2px;
+}
+
+.contact-box h2 {
+font-size: 35px;
+margin: 15px 0;
+}
+
+.contact-box h2 span {
+color: var(--hot-pink);
+}
+
+.contact-box > p:not(:first-child) {
+color: var(--muted);
+font-size: 13px;
+margin-bottom: 25px;
+}
+
+.contact-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.contact-buttons a {
+background: white;
+color: var(--pink);
+padding: 12px 25px;
+border-radius: 30px;
+font-size: 13px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+background: var(--pink);
+color: white;
+transform: translateY(-5px);
+}
+
+.contact-box h4 {
+color: #a47b35;
+font-size: 13px;
+margin-top: 30px;
+}
+
+/* FOOTER */
+
+footer {
+background: white;
+text-align: center;
+padding: 25px;
+color: #b58b9b;
+font-size: 12px;
+}
+
+/* ANIMATIONS */
+
+@keyframes floating {
+0%, 100% {
+transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-12px);
+}
+
+}
+
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+.home {
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.hobby-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.home-image img {
+    width: 250px;
+    height: 290px;
+}
+
+}
+
+@media (max-width: 650px) {
+
+.navbar {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-links a {
+    font-size: 11px;
+}
+
+.home {
+    padding: 55px 7%;
+}
+
+.section-title h2 {
+    font-size: 27px;
+}
+
+.hobby-container,
+.favorite-container,
+.organization-container {
+    grid-template-columns: 1fr;
+}
+
+.about-card {
+    padding: 25px;
+}
+
+.contact-box h2 {
+    font-size: 27px;
+}
+
+}
